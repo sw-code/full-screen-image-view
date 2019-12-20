@@ -2,12 +2,11 @@ package com.github.tntkhang.fullscreenimageview.library;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import java.util.ArrayList;
 
@@ -27,14 +26,14 @@ public class FullScreenImageViewActivity extends AppCompatActivity {
                 finish();
             }
         });
-        ViewPager viewPager = findViewById(R.id.view_pager);
+        ViewPager2 viewPager = findViewById(R.id.view_pager);
 
         ArrayList<String> imagePaths = getIntent().getStringArrayListExtra(URI_LIST_DATA);
 
         int currentPos = getIntent().getIntExtra(IMAGE_FULL_SCREEN_CURRENT_POS, 0);
 
         FragmentManager manager = getSupportFragmentManager();
-        PagerAdapter adapter = new PagerAdapter(manager, imagePaths);
+        PagerAdapter adapter = new PagerAdapter(manager, imagePaths, getLifecycle());
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(currentPos);
     }

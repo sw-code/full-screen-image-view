@@ -3,14 +3,15 @@ package com.github.full_screen_image_view_demo;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.github.tntkhang.fullscreenimageview.library.FullScreenImageViewActivity;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,9 +43,9 @@ public class ImagePickerAdapter extends RecyclerView.Adapter<ImagePickerAdapter.
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.item = mItems.get(position);
 
-        Glide.with(context)
+        Picasso.get()
                 .load(holder.item)
-                .into(holder.ivItem);
+                .into((ImageView) holder.itemView);
 
         holder.ivItem.setOnClickListener(view -> {
             Intent fullImageIntent = new Intent(context, FullScreenImageViewActivity.class);

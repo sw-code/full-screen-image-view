@@ -2,12 +2,14 @@ package com.github.tntkhang.fullscreenimageview.library;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.bumptech.glide.Glide;
+import androidx.fragment.app.Fragment;
+
+import com.squareup.picasso.Picasso;
+
 
 public class ImageFragment extends Fragment {
     private Uri uri;
@@ -30,11 +32,11 @@ public class ImageFragment extends Fragment {
             uri = Uri.parse(path);
         }
         View view = inflater.inflate(R.layout.full_image_item, container, false);
-//        TouchImageView ivContent = view.findViewById(R.id.iv_content);
 
         if (view instanceof TouchImageView) {
-            Glide.with(this)
+            Picasso.get()
                     .load(uri)
+                    .placeholder(R.drawable.loading)
                     .into((TouchImageView)view);
         }
 

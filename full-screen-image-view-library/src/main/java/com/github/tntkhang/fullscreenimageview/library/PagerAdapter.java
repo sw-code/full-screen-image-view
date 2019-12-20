@@ -1,36 +1,36 @@
 package com.github.tntkhang.fullscreenimageview.library;
 
 import android.net.Uri;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.lifecycle.Lifecycle;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PagerAdapter extends FragmentStatePagerAdapter {
+public class PagerAdapter extends FragmentStateAdapter {
 
     private List<Uri> imagesUri = new ArrayList<>();
 
-    PagerAdapter(FragmentManager fragmentManager, List<String> images) {
-        super(fragmentManager);
+    PagerAdapter(FragmentManager fragmentManager, List<String> images, Lifecycle lifecycle) {
+        super(fragmentManager, lifecycle);
         for (String image : images) {
             this.imagesUri.add(Uri.parse(image));
         }
     }
 
+    @NonNull
     @Override
-    public Fragment getItem(int position) {
+    public Fragment createFragment(int position) {
         Uri item = imagesUri.get(position);
         return ImageFragment.newInstance(item);
     }
 
     @Override
-    public int getCount() {
+    public int getItemCount() {
         return imagesUri.size();
-    }
-    @Override
-    public CharSequence getPageTitle(int position) {
-        return "";
     }
 }
