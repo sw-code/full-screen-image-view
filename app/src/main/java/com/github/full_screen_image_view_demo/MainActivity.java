@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.tntkhang.fullscreenimageview.library.FullScreenImageViewActivity;
+import com.github.tntkhang.fullscreenimageview.library.FullScreenParameter;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
@@ -70,8 +71,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void onImageClickAction(ArrayList<String> uriString, int pos) {
         Intent fullImageIntent = new Intent(MainActivity.this, FullScreenImageViewActivity.class);
-        fullImageIntent.putExtra(FullScreenImageViewActivity.URI_LIST_DATA, uriString);
-        fullImageIntent.putExtra(FullScreenImageViewActivity.IMAGE_FULL_SCREEN_CURRENT_POS, pos);
+        fullImageIntent.putExtra(FullScreenParameter.URI_LIST_DATA, uriString);
+        fullImageIntent.putExtra(FullScreenParameter.IMAGE_FULL_SCREEN_CURRENT_POS, pos);
+        fullImageIntent.putExtra(FullScreenParameter.IMAGE_FULL_SCREEN_BACK_BUTTON, R.drawable.ic_back_button);
         startActivity(fullImageIntent);
 
     }

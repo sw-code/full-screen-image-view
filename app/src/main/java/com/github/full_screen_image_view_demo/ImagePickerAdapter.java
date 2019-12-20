@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.github.tntkhang.fullscreenimageview.library.FullScreenImageViewActivity;
+import com.github.tntkhang.fullscreenimageview.library.FullScreenParameter;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -53,8 +54,8 @@ public class ImagePickerAdapter extends RecyclerView.Adapter<ImagePickerAdapter.
             for (Uri uri : mItems) {
                 uriString.add(uri.toString());
             }
-            fullImageIntent.putExtra(FullScreenImageViewActivity.URI_LIST_DATA, uriString);
-            fullImageIntent.putExtra(FullScreenImageViewActivity.IMAGE_FULL_SCREEN_CURRENT_POS, position);
+            fullImageIntent.putExtra(FullScreenParameter.URI_LIST_DATA, uriString);
+            fullImageIntent.putExtra(FullScreenParameter.IMAGE_FULL_SCREEN_CURRENT_POS, position);
             context.startActivity(fullImageIntent);
         });
         holder.ivCancel.setOnClickListener(view -> removeItem(holder.item));
