@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply from: 'https://raw.githubusercontent.com/sw-code/package-dist/master/githubproperties.gradle'
 
 ext {
     publishedGroupId = 'io.swcode'
