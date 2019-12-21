@@ -10,8 +10,8 @@ import android.widget.ImageView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.github.tntkhang.fullscreenimageview.library.FullScreenImageViewActivity;
-import com.github.tntkhang.fullscreenimageview.library.FullScreenParameter;
+import io.swcode.fullscreenimageview.FullScreenImageViewActivity;
+import io.swcode.fullscreenimageview.FullScreenParameter;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

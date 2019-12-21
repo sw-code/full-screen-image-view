@@ -1,4 +1,4 @@
-package com.github.tntkhang.fullscreenimageview.library;
+package io.swcode.fullscreenimageview;
 
 import android.annotation.TargetApi;
 import android.content.Context;

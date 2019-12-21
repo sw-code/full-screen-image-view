@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.github.tntkhang.fullscreenimageview.library" >
+    package="io.swcode.fullscreenimageview" >
 
     <application>
-        <activity android:name=".FullScreenImageViewActivity"
+        <activity android:name="io.swcode.fullscreenimageview.FullScreenImageViewActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
     </application>
 </manifest>

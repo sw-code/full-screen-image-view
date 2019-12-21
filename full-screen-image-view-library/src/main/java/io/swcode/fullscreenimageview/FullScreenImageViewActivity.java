@@ -1,12 +1,13 @@
-package com.github.tntkhang.fullscreenimageview.library;
+package io.swcode.fullscreenimageview;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
+
 
 import java.util.ArrayList;
 

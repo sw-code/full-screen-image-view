@@ -10,8 +10,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.github.tntkhang.fullscreenimageview.library.FullScreenImageViewActivity;
-import com.github.tntkhang.fullscreenimageview.library.FullScreenParameter;
+import io.swcode.fullscreenimageview.FullScreenImageViewActivity;
+import io.swcode.fullscreenimageview.FullScreenParameter;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;

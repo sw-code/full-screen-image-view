@@ -1,21 +1,13 @@
 apply plugin: 'com.android.library'
+apply from: 'https://raw.githubusercontent.com/sw-code/package-dist/master/githubproperties.gradle'
 
 ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'full-screen-image-view-library'   // Replace by your library name, has to be same as your library module name
-
     publishedGroupId = 'io.swcode'
-    libraryName = 'full-screen-image-view-library'  //  Replace by your library name, has to be same as your library module name
-    artifact = 'full-screen-image-view-library'     // Replace by your library name, has to be same as your library module name
+    artifactId = 'full-screen-image-view'     // Replace by your library name, has to be same as your library module name
 
     libraryDescription = 'This is a library to help developer faster on view an image full screen which has some gesture like double tap to zoom, span, zoom in/out, move.'
 
-    // Your github repo link
-    siteUrl = 'https://github.com/sw-code/full-screen-image-view' // Replace by your url
-    gitUrl = 'git@github.com:sw-code/full-screen-image-view.git' // Replace by your url
-    githubRepository= 'https://github.com/sw-code/full-screen-image-view' // Replace by your url
-
-    libraryVersion = '1.0.0' // Increase whenever you update library version
+    libraryVersion = '1.0.3'
 
     developerId = 'viktorgt' // Replace by your name
     developerName = 'Viktor Gottfried' // Replace by your name
@@ -63,5 +55,5 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
 }
 
-apply from: 'https://raw.githubusercontent.com/tntkhang/library-to-bintray/master/install.gradle'
-apply from: 'https://raw.githubusercontent.com/tntkhang/library-to-bintray/master/bintray.gradle'
+apply from: 'https://raw.githubusercontent.com/sw-code/package-dist/master/github-android.gradle'
+

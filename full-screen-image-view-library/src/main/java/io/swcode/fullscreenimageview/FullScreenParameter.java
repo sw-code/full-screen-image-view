@@ -1,4 +1,4 @@
-package com.github.tntkhang.fullscreenimageview.library;
+package io.swcode.fullscreenimageview;
 
 public class FullScreenParameter {
     public static final String URI_LIST_DATA = "URI_LIST_DATA";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.github.tntkhang.fullscreenimageview.library.TouchImageView
+<io.swcode.fullscreenimageview.TouchImageView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/iv_content"
     android:layout_height="wrap_content"
