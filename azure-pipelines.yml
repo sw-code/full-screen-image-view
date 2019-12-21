@@ -18,7 +18,7 @@ steps:
 - task: Gradle@2
   inputs:
     workingDirectory: ''
-    options: '-DGITHUB_PROPERTIES_FILE=$(githubProperties.secureFilePath)'
+    options: '-DGITHUB_PROPERTIES_FILE="$(githubProperties.secureFilePath)"'
     gradleWrapperFile: 'gradlew'
     gradleOptions: '-Xmx3072m'
     publishJUnitResults: false
