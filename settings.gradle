@@ -1,1 +1,2 @@
-include ':app', ':full-screen-image-view-library'
+rootProject.name='full-screen-image-view-root'
+include ':app', ':full-screen-image-view'

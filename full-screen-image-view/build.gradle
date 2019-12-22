@@ -2,7 +2,6 @@ apply plugin: 'com.android.library'
 
 ext {
     publishedGroupId = 'io.swcode'
-    artifactId = 'full-screen-image-view'     // Replace by your library name, has to be same as your library module name
 
     libraryDescription = 'This is a library to help developer faster on view an image full screen which has some gesture like double tap to zoom, span, zoom in/out, move.'
 
