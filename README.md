@@ -1,4 +1,6 @@
 # full-screen-image-view-library
+[![Build Status](https://dev.azure.com/sw-code/SpotAR/_apis/build/status/sw-code.full-screen-image-view?branchName=master)](https://dev.azure.com/sw-code/SpotAR/_build/latest?definitionId=8&branchName=master)
+
 This is a library to help developer faster on view an image full screen which has some gesture like double tap to zoom, span, zoom in/out, move.
 Fork of [tntkhang/full-screen-image-view](https://github.com/tntkhang/full-screen-image-view),
 migrated to AndroidX and Jetpack.
