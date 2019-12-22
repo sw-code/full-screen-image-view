@@ -3,9 +3,6 @@
 # Add steps that test, sign, and distribute the APK, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/android
 
-trigger:
-- master
-
 pool:
   vmImage: 'macos-latest'
 
@@ -16,6 +13,7 @@ steps:
   inputs:
     secureFile: 'github.properties'
 - task: Gradle@2
+  name: "Build"
   inputs:
     workingDirectory: ''
     options: '-DGITHUB_PROPERTIES_FILE="$(githubProperties.secureFilePath)"'
@@ -24,3 +22,16 @@ steps:
     publishJUnitResults: false
     testResultsFiles: '**/TEST-*.xml'
     tasks: 'build'
+
+- task: Gradle@2
+  name: "Publish"
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
+  inputs:
+    workingDirectory: ''
+    options: '-DGITHUB_PROPERTIES_FILE="$(githubProperties.secureFilePath)"'
+    gradleWrapperFile: 'gradlew'
+    gradleOptions: '-Xmx3072m'
+    publishJUnitResults: false
+    testResultsFiles: '**/TEST-*.xml'
+    tasks: 'publish'
+
