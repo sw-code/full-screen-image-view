@@ -12,6 +12,7 @@ steps:
   displayName: 'Download github.properties'
   inputs:
     secureFile: 'github.properties'
+
 - task: Gradle@2
   name: "Build"
   inputs:
