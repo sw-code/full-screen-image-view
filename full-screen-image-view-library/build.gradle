@@ -6,7 +6,7 @@ ext {
 
     libraryDescription = 'This is a library to help developer faster on view an image full screen which has some gesture like double tap to zoom, span, zoom in/out, move.'
 
-    libraryVersion = '1.0.3'
+    libraryVersion = '1.0.4'
 
     developerId = 'viktorgt' // Replace by your name
     developerName = 'Viktor Gottfried' // Replace by your name
