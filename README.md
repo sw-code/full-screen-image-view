@@ -10,7 +10,7 @@ migrated to AndroidX and Jetpack.
 # Setup
 1. Dependency
 ```
-implementation 'io.swcode:full-screen-image-view-library:1.0.4'
+implementation 'io.swcode:full-screen-image-view:1.0.0'
 ```
 
 2. Call open a FullScreenImageViewActivity and sent some appropriate data.
