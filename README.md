@@ -7,9 +7,9 @@ migrated to AndroidX and Jetpack.
 
 [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-full--screen--image--view-green.svg?style=flat )]( https://android-arsenal.com/details/1/7986 )
 # Setup
-1. Add to build.gradle in app level
+1. Dependency
 ```
-implementation 'com.github.tntkhang:full-screen-image-view-library:1.1.0'
+implementation 'io.swcode:full-screen-image-view-library:1.0.4'
 ```
 
 2. Call open a FullScreenImageViewActivity and sent some appropriate data.
